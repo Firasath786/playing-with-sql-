@@ -1,0 +1,2 @@
+select get_film_count(15,15);
+select get_film_count(25, 30)

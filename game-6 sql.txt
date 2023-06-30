@@ -1,0 +1,9 @@
+
+SELECT last_name
+FROM staff
+WHERE staff.last_name = some (
+    SELECT last_name
+    FROM actor);
+
+
+

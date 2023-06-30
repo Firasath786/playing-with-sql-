@@ -1,0 +1,8 @@
+SELECT ct.city, EXTRACT(week FROM p.payment_date) AS week, SUM(p.amount) AS total_payment
+FROM payment p
+JOIN customer c ON p.customer_id = c.customer_id
+JOIN address a ON c.address_id = a.address_id
+JOIN city ct ON a.city_id = ct.city_id
+GROUP BY ct.city, EXTRACT(week FROM p.payment_date)
+HAVING SUM(p.amount) > 31
+ORDER BY total_payment DESC;

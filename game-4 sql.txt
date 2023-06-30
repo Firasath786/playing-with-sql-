@@ -1,0 +1,14 @@
+SELECT customer_id, first_name, last_name
+FROM customer c
+WHERE EXISTS (
+    SELECT 1
+    FROM rental r
+	where rental_date is null
+    
+    
+);
+
+
+
+
+NOTE-Output is not having any data.so no csv file for this.

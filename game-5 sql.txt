@@ -1,0 +1,12 @@
+
+
+SELECT last_name
+FROM staff
+WHERE staff.last_name = some (
+    SELECT last_name
+    FROM actor);
+
+
+
+
+Note-Staff do not share the last name with the actor...so no csv file for this

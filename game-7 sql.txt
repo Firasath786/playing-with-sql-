@@ -1,0 +1,5 @@
+SELECT
+  title,
+  rental_duration,
+  AVG(rental_duration) OVER () AS monthly
+FROM film;

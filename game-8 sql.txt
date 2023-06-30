@@ -1,0 +1,6 @@
+WITH short_film AS ( 
+        SELECT*FROM film
+          LIMIT 40     )
+select rating,STRING_AGG(description,  '50000 ')
+FROM 	short_film
+GROUP BY rating;
